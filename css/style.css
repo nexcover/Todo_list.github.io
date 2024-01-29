@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.title {
+    border-bottom: 2px solid black;
+}
+
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+    width: 90%;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    border-bottom: 1.5px solid lightgray;
+}
+
+.todo-item span {
+    max-width: 55%;
+    /* 15 characters at the average width of 10px per character */
+    overflow: visible;
+    white-space: wrap;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 8px;
+    width: auto;
+    height: 1.7rem;
+    font-size: 1rem;
+    background-color: yellow;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* 에러 모달에 대한 새로운 스타일 */
+#errorModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.error-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}

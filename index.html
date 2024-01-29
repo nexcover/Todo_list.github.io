@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+
+    <h1 class="title">Todo List</h1>
+    <input type="text" id="searchInput" oninput="searchTodoItems()" placeholder="검색으로 찾으십시오">
+    <ul id="todo-list"></ul>
+    <button onclick="openModal('add')">추가</button>
+
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <label for="newItem">목록:</label>
+            <input type="text" id="newItem" />
+            <button onclick="validateAndAddItem()">추가</button>
+            <button onclick="closeModal('add')">취소</button>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <label for="editItem">수정:</label>
+            <input type="text" id="editItem" />
+            <button onclick="validateAndSaveEdit()">저장</button>
+            <button onclick="closeModal('edit')">취소</button>
+        </div>
+    </div>
+
+    <!-- 문자 제한 초과 에러를 위한 새로운 모달 -->
+    <div id="errorModal" class="modal">
+        <div class="error-modal-content">
+            <p>40자 이상은 입력이 안 됩니다.</p>
+            <button onclick="closeModal('error')">확인</button>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
