@@ -10,8 +10,9 @@ function renderTodoList() {
         const listItem = document.createElement('li');
         listItem.className = 'todo-item';
         listItem.innerHTML = `
-          <span>${item}</span>
-          <div>
+        <span>${item}</span>
+        <div>
+        <input type="checkbox" (${index})>
             <button onclick="openEditModal(${index})">수정</button>
             <button onclick="deleteItem(${index})">삭제</button>
           </div>
@@ -131,6 +132,7 @@ function renderTodoList(items = todoItems) {
         const listItem = document.createElement('li');
         listItem.className = 'todo-item';
         listItem.innerHTML = `
+                <input type = "checkbox" style = "width: 20px; margin:  0 0 8px 0">
                 <span>${item}</span>
                 <div>
                     <button onclick="openEditModal(${index})">수정</button>

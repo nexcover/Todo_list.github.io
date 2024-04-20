@@ -6,6 +6,11 @@ body {
     margin: 20px;
 }
 
+#searchInput {
+    width: 90%;
+    height: 25px;
+}
+
 .title {
     border-bottom: 2px solid black;
 }
